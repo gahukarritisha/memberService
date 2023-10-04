@@ -27,17 +27,28 @@ public class MemberHelper
         m.setStatus(Status.ACTIVE);
         setNames(member,m);
         m.setAddress(member.getAddress());
-        m.setContact(Long.parseLong(member.getContactPhone().toString()));
-        m.setAlternateContact(Long.parseLong(member.getMobileNo().toString()));
+        m.setContact(setLong(member.getContactPhone()));
+        m.setAlternateContact(setLong(member.getMobileNo()));
         m.setEmail(member.getEmail());
         m.setUserName(member.getUsername());
         m.setPassword(member.getPassword());
         return m;
     }
 
-    private void setNames(MemberDTO member, Member m) {
+    private Long setLong(Integer member) {
+        if (member!=null)
+            return Long.parseLong(member.toString());
+        else
+            return 0L;
+    }
 
-        List<String> names = Arrays.asList(member.getOwnerName().split(" "));
+    private void setNames(MemberDTO member, Member m) {
+        String name = member.getOwnerName();
+        if(name == null){
+            m.setFirstName("");
+            return;
+        }
+        List<String> names = Arrays.asList(name.split(" "));
         if (names.size()>2){
             m.setFirstName(names.get(0));
             m.setMiddleName(names.get(1));

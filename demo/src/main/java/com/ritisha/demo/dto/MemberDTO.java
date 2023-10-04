@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity(name = "member")
@@ -46,8 +47,8 @@ public class MemberDTO {
     String area;
     Integer error;
     String sms_sent;
-    LocalDate created_on;
-    LocalDate modified_on;
+//    LocalDateTime created_on;
+//    LocalDateTime modified_on;
     Integer loginfail_count;
     String salesperson;
     Integer sms_count;
@@ -57,8 +58,8 @@ public class MemberDTO {
     String data_entry_person;
     Integer audit;
     Integer paid;
-    LocalDate audit_date;
-    LocalDate paid_date;
+//    LocalDateTime audit_date;
+//    LocalDateTime paid_date;
     String audit_by;
     Integer paid_by;
 

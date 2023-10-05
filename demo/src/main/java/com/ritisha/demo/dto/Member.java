@@ -26,7 +26,7 @@ public class Member {
 	private String middleName;
 //	@NotNull
 	private String lastName;
-	@Autowired
+	
 	private AccountType type;
 //	@NotNull
 	private String address;
@@ -42,7 +42,7 @@ public class Member {
 	private String userName;
 //	@NotNull
 	private String password;
-	@Autowired
+
 	private Status status=Status.INACTIVE;
 	@Autowired
 	private Document document;

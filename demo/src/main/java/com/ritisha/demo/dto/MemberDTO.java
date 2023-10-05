@@ -39,16 +39,14 @@ public class MemberDTO {
     String bkp;
     String status;
     String type;
-    String forgotpasswordLink;
     String division;
+    String forgotpasswordLink;
     String main_zone;
     Integer sdpo_id;
     Integer adsp_id;
     String area;
     Integer error;
     String sms_sent;
-//    LocalDateTime created_on;
-//    LocalDateTime modified_on;
     Integer loginfail_count;
     String salesperson;
     Integer sms_count;
@@ -58,8 +56,6 @@ public class MemberDTO {
     String data_entry_person;
     Integer audit;
     Integer paid;
-//    LocalDateTime audit_date;
-//    LocalDateTime paid_date;
     String audit_by;
     Integer paid_by;
 
